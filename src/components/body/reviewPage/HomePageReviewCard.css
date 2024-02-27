@@ -1,0 +1,53 @@
+.homePage-review-outer-container-1 {
+    height: 48%;
+    margin: 0.5%;
+    padding: 1% 1% 1% 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    filter: grayscale(1);
+    transition: filter 0.5s ease-in-out;
+}
+
+.homePage-review-outer-container-1:hover {
+    filter: grayscale(0);
+    transition-property: box-shadow, filter;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.image-deco {
+    width: 80%;
+    margin-right: 3%;
+    border: 2px solid black;
+}
+
+
+.review-desc-h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+font-weight: 660;
+margin: 1% 0% 0% 0%;
+}
+
+.review-desc-h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.0rem;
+    margin: 0%;
+}
+
+.review-desc-h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.7rem;
+    margin: 0%;
+}
+
+.review-desc-p {
+    font-family: "Spectral", serif;
+    font-size: 0.9rem;
+    margin: 0%;
+}
+
+.max-height-hastag-container {
+    overflow-y: scroll;
+}

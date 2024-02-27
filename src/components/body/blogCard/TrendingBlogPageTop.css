@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Spectral:300,400,500,600,700,800");
+
+.title-side-container {
+    width: 22%;
+    margin: 0% 1%;
+    padding: 1% 0%;
+}
+
+.title-side-p-style {
+    margin: 2% 0%;
+    font-size: 0.8rem;
+    font-family: "Spectral", serif;
+}
+
+.title-side-h3-style {
+    margin: 2% 0%;
+    font-size: 1.2rem;
+        
+}

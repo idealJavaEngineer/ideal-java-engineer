@@ -1,0 +1,67 @@
+.text-editor {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.text-editor::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for other browsers */
+  .text-editor {
+    scrollbar-width: none;
+  }
+
+.editor-container {
+    height: 83vh;
+    width: 48%;
+}
+
+.editor-output {
+    
+    width: 48%;
+}
+
+.editor-style {
+    border: 2px solid black;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+img {
+    text-align: center;
+}
+
+code {
+    
+    color: #d8ffed !important;
+    font-size: 1.2rem !important;
+}
+
+pre {
+    background-color: black;
+}
+
+.output-border {
+    border: 2px solid black;
+    height: 85vh;
+    margin-right: 1%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.save-blog-button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #000000 !important;
+    width: 100%;
+    font-size: 16px;
+}

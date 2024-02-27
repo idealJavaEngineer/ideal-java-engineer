@@ -1,0 +1,13 @@
+.img-size {
+  height : 680px;
+  width : 512px;  
+    filter: grayscale(1);
+    transition: filter 0.5s ease-in-out;
+  }
+
+.img-size:hover {
+  height : 680px;
+  width : 512px;  
+  filter: grayscale(0);
+  transition: filter 1s ease-in-out;
+}  

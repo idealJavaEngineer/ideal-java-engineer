@@ -1,0 +1,25 @@
+.slidingBlog-image {
+    background-image: url('E:\IdealJavaEngineer\Front-End\idealjavaengineer\src\static\images\backgroundImage1.jpg');
+  }
+
+.img-size {
+  height : 680px;
+  width : 512px;  
+}
+
+.double-border-style {
+  border: 2px solid black;
+}
+
+
+.slidebar-outer-container {
+  display: flex;
+  flex-direction: row;
+  padding:0% 0.7%;
+  width: 69%;
+}
+
+.container-dimension {
+  width: 100%;
+  border: 2px solid black;
+}

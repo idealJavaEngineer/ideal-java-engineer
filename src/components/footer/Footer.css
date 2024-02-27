@@ -1,0 +1,17 @@
+.line-division {
+    position: relative;
+        margin: 1%;
+        border: 1px solid black;
+        height: 2px;
+        background-color: black;
+}
+
+.logo-size-end {
+    width: 14%;
+    margin-bottom: 1%;
+
+}
+
+.content-p-style {
+    font-size: 0.8rem;
+}
