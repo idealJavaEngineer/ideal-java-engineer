@@ -1,0 +1,8 @@
+.blog-outer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-container {
+  width: 60%;
+}
