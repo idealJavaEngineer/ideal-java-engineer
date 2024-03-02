@@ -7,5 +7,5 @@ export const uploadBlogPost = (userId, blogData) => {
         ...blogData,
         userId : userId
     };
-    return axios.post(`http://localhost:8080/admin/upload-blog` ,requestData);
+    return axios.post(`http://localhost:8080/blog-post/upload-blog` ,requestData);
 }
