@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="footer-container">
             <hr className="line-division"></hr>
-            <p className='content-p-style'>DTD journal is optimized for learning, knowledge gethering and sharing your thoughts on any subject over the internet.</p>
+            <p className='content-p-style'>I.J.E is optimized for learning, knowledge gethering and sharing your thoughts on any subject over the internet.</p>
             <hr className="line-division"></hr>
             <div className="container">
                 <div className="row justify-content-center copyright">
