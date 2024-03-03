@@ -61,9 +61,7 @@ function LearnPage() {
     }
 
     const callBackFunction = (response) => {
-        if (response === "failure") {
-            window.prompt(response);
-        } else {
+        if (response !== "failure") {
             setBlogsInfo(response.blogs);
             setDefaulTag(response.defaultTag);
             setTags(response.tags);

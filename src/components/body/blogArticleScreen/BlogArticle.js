@@ -8,7 +8,7 @@ const BlogArticle = () => {
 
     useEffect(() => {
         getBlogContent(id);
-    })
+    },[])
 
     const getBlogContent = () => {
         GetBlogPostDataUtility(id, callBackFunction);
