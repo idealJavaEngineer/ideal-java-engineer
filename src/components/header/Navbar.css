@@ -62,6 +62,9 @@
 .link-decoration {
     text-decoration: inherit;
     color: rgb(255, 255, 255);
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 1.3em;
 }
 
 .link-decoration:hover {

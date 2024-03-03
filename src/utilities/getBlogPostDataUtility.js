@@ -11,4 +11,9 @@ const GetBlogPostDataUtility = (blogId , getResponse) => {
     })
 } 
 
+const getfilteredBlogByTagUtility = (tagId, callBackFunction) => {
+
+}
+
+
 export default GetBlogPostDataUtility;

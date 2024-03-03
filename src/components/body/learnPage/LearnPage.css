@@ -46,14 +46,16 @@
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 5.3rem;
-    margin: 1% 1% 4% 3%;
+    margin: 1% 1% 0% 3%;
     color: rgb(35, 35, 110);
 }
 
+
 .hashtag-style {
     font-family: 'Playfair Display', serif;
-    margin-left: 8%;
-    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+
 }
 
 .inner-container-blog {

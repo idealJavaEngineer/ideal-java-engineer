@@ -1,8 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.playfiar-display-regular {
+  font-family: "Recursive", sans-serif;
+}
+
+.dancing-script {
+font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+}
+
 .blog-outer-container {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+}
+
+.screen-background {
+  margin: 0%;
+  padding: 0%;
+  background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
 }
 
 .inner-container {
-  width: 60%;
+  border-radius: 16px;
+    background: #cfccc6;
+    box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6;
+  margin-left: 2%;
+  display: flex;
+  width: 71%;
+  justify-content: space-around;
+  padding: 2% 3%;
+}
+
+
+.inner-container p {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 1.1em;
+}
+
+.inner-container h1 {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 4em;
+}
+
+.inner-container h2 {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 3.5em;
+}
+
+.inner-container h3 {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 3em;
+}
+
+.inner-container h4 {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 2em;
+}
+
+.inner-container h5 {
+  font-family: "Recursive", sans-serif;
+  font-optical-sizing: auto;
+    font-size: 1.5em;
+}
+
+.inner-container img {
+  width: 90%;
+  margin: 2%;
+  border-radius: 12px;
+  filter: grayscale(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.inner-container img:hover {
+  filter: grayscale(0);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.inner-container code {
+  display: block;
+  text-align: left;
+  background-color: #646464; /* Background color */
+  padding: 1% 2%; /* Padding around the code */
+  border: 1px solid #ddd;
+  border-radius: 2px; /* Rounded corners */
+  font-family: "Kode Mono", monospace !important;
+  font-size: 0.9em; 
+  color: #ffffff !important; /* Text color */
+}
+
+
+.h1-style {
+  font-size: 4em;
+  font-weight: 600;
+  margin: 0%;
+}
+
+.h4-style-author {
+  font-size: 1.6em;
+  color: black;
+  margin: 0%;
+}
+
+.heading-container {
+  padding: 3% 0% 4% 0%;
+}
+
+.tag-style {
+  color: rgb(255, 255, 255);
+  color: rgb(84, 84, 224);
+}
+
+.p-style-1 {
+  font-size: 1.1em;
+  padding: 0%;
+  margin: 0% 1% 0px 0%;
 }

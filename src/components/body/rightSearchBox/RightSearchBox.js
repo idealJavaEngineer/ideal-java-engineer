@@ -2,7 +2,18 @@ import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import '../learnPage/LearnPage.css';
 import React, {useState} from 'react';
 
-function RightSearchBox({tags, categoryName}) {
+function RightSearchBox({tags, categoryName, updateCurrTag}) {
+
+    
+
+    const filterBlogByTag = (tag) => {
+        if(tag === "default") {
+            const defaultTag = { id : -1, tagName: "trending"};
+            updateCurrTag(defaultTag);
+        } else {
+            updateCurrTag(tag);
+        }
+    }
 
     return (
         <div className="hashtag-search-container">
@@ -16,9 +27,10 @@ function RightSearchBox({tags, categoryName}) {
                 <div className="hashtag-button-container">
                     {
                         tags.map((tag, index) => 
-                            <button key ={index} className='button-style-blog-page'><p className="link-style-blog-page">#{tag.tagName}</p></button>
+                            <button key ={index} className='button-style-blog-page' onClick={() => filterBlogByTag(tag)}><p className="link-style-blog-page">#{tag.tagName}</p></button>
                         )
                     }
+                    <button className='button-style-blog-page' onClick={() => filterBlogByTag("default")}><p className="link-style-blog-page">#trending</p></button>
                 </div>
             </div>
         </div>

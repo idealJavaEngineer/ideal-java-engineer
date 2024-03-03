@@ -2,7 +2,7 @@ import getInitialDataForCategoryScreen from "../services/categoryScreenDataServi
 
 
 const getInitialDataForCategoryUtility = (requestData, callBackFunction) => {
-
+  
   const promise = getInitialDataForCategoryScreen(requestData);
   promise.then((response) => {
     callBackFunction(response.data);

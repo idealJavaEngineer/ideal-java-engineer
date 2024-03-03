@@ -20,8 +20,7 @@ function Footer() {
                             </ul>
                         </div> */}
                         <div className="widget">
-                            <p className='content-p-style'>Copyright ©<script>document.write(new Date().getFullYear());</script>2022 All rights reserved | This Website is made with <i className="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/tanuj-yadav-a72a60187/" target="_blank" rel="nofollow noopener">Tanuj</a>
-                            </p>
+                            <p className='content-p-style'>Copyright ©<script>document.write(new Date().getFullYear());</script>2024 All rights reserved</p>
                             <div className="d-block">
                                 <a href="#" className="m-2">Terms &amp; Conditions</a>/
                                 <a href="#" className="m-2">Privacy Policy</a>

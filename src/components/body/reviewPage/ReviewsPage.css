@@ -1,4 +1,14 @@
-.Review-background-image {
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+
+.kode-mono {
+    font-family: "Kode Mono", monospace !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.tutorial-screen-container {
+    background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
 }
 
 .vertical-1 {
@@ -19,7 +29,6 @@
 }
 
 
-
 .body-container {
     display: flex;
     /* height: 160vh; */
@@ -27,18 +36,26 @@
     margin-bottom: 10%;
 }
 
-.heading-1-review {
+.disabled {
+    pointer-events: none; /* Disable mouse events */
+    opacity: 0.5; /* Optionally reduce opacity to visually indicate disabled state */
+    /* You can also apply other styles as needed */
+}
+
+.heading-1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 5.3rem;
-    margin-left: 8%;
-    color: #4E8A82;
+    margin: 1% 1% 0% 3%;
+    color: rgb(35, 35, 110);
 }
+
 
 .hashtag-style {
     font-family: 'Playfair Display', serif;
-    margin-left: 8%;
-    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+
 }
 
 .inner-container-blog {
@@ -52,6 +69,28 @@
     font-family: 'Playfair Display', serif;
     font-weight: 800;
     margin: 0%;
+}
+
+.hashtag-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    margin: 3% 1%;
+    padding: 1%;
+    width: 21%;
+    min-height:40vh;
+    max-height:60vh;
+    /* border: 3px solid rgba(0, 0, 0, 0.549); */
+    border-radius: 16px;
+    background: #e1e1e1;
+    box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6;
+}
+
+.hashtag-search-container:hover {
+    box-shadow: 0px 0px 5px rgba(135, 135, 135, 0.74);
+    transition-property: box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 
 .hashtag-container-outer {
@@ -104,24 +143,18 @@
 }
 
 .text-color {
-    color: #4D1818;
+    color: #000000;
 }
 
 .search-block-style {
-    height: 70%;
+    height: 81%;
 }
 
 .search-text-style {
     font-family: 'Playfair Display', serif;
-    color: #4D1818;
     margin-bottom: 4%;
 }
 
 .max-height-hastag-container {
     overflow-y: scroll;
-}
-
-h4 {
-    font-family: 'Playfair Display', serif;
-    color: #4D1818;
 }

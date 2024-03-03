@@ -2,21 +2,19 @@ import React, { useEffect, useState } from 'react';
 import BlogRowCard from '../blogCard/BlogRowCard';
 import './LearnPage.css';
 import Footer from '../../footer/Footer';
-import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import getInitialDataForCategoryUtility from '../../../utilities/categoryScreenDataUtility';
 import RightSearchBox from '../rightSearchBox/RightSearchBox';
 
 function LearnPage() {
 
     const [blogsInfo, setBlogsInfo] = useState([]);
-    const [defaultTag, setDefaulTag] = useState("trending");
+    const [currTag, setCurrTag] = useState({ id : -1, tagName : "trending"});
     const [tags, setTags] = useState([]);
     const [loading, setLoading] = useState(true);
     const [pageNumber, setPageNumber] = useState(0);
 
     useEffect(() => {
-
-        getInitialDataForScreen(0);
+        getInitialDataForScreen(0, -1);
 
     }, [])
 
@@ -39,34 +37,48 @@ function LearnPage() {
     const loadNextPageContent = () => {
         const nextPageNumber = pageNumber + 1;
         setPageNumber(nextPageNumber);
-        getInitialDataForScreen(nextPageNumber);
-    }
-
-    const loadPrevPageContent = () => {
-        const prevPageNumber = pageNumber - 1;
-        setPageNumber(prevPageNumber);
-        getInitialDataForScreen(prevPageNumber);
+        getInitialDataForScreen(nextPageNumber, currTag.id);
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
     }
 
-    const getInitialDataForScreen = (currPageNumber) => {
+    const loadPrevPageContent = () => {
+        const prevPageNumber = pageNumber - 1;
+        setPageNumber(prevPageNumber);
+        getInitialDataForScreen(prevPageNumber, currTag.id);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    const getInitialDataForScreen = (currPageNumber, tagId) => {
         const requestData = {
             categoryName: "Tutorial",
-            pageNumber: currPageNumber.toString()
+            pageNumber: currPageNumber.toString(),
+            tagId: tagId.toString()
         }
         getInitialDataForCategoryUtility(requestData, callBackFunction);
     }
 
     const callBackFunction = (response) => {
+        
         if (response !== "failure") {
             setBlogsInfo(response.blogs);
-            setDefaulTag(response.defaultTag);
+            if(response.defaultTag.id != currTag.id) {
+                setCurrTag(response.defaultTag);
+            }
             setTags(response.tags);
             setLoading(false);
         }
+    }
+
+    const updateCurrTag = (tag) => {
+        setCurrTag(tag);
+        setLoading(true);
+        getInitialDataForScreen(0, tag.id);
     }
 
     return (
@@ -83,6 +95,7 @@ function LearnPage() {
                                     <div className="opacity-on-title">
 
                                         <h1 className="heading-1 kode-mono">Tutorials</h1>
+                                        <h3 className='hashtag-style kode-mono'>#{currTag.tagName}</h3>
                                     </div>
                                     <div className='pagination-outer-container'>
                                         <nav className="" aria-label="Page navigation example">
@@ -109,7 +122,7 @@ function LearnPage() {
                                     </div>
                                 </div>
                                 {tags != [] ? (
-                                    <RightSearchBox tags={tags} categoryName="Tutorials" />
+                                    <RightSearchBox tags={tags} updateCurrTag={updateCurrTag} categoryName="Tutorials" />
                                 ) :
                                     (<div>Loading tags..</div>)
                                 }
