@@ -19,52 +19,63 @@ font-family: "Dancing Script", cursive;
   margin: 0%;
   padding: 0%;
   background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
+  font-family: 'Playfair Display', serif;
+}
+
+.like-iiner-continer {
+  display: flex;
+  flex-direction: column;
+  width: 71%;
+  justify-content: space-around;
+  margin-left: 1%;
 }
 
 .inner-container {
   border-radius: 16px;
-    background: #cfccc6;
-    box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6;
-  margin-left: 2%;
+    background: #e3e0da;
+    /* box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6; */
+    /* border: 1.5px solid #bab9b7; */
+  
   display: flex;
-  width: 71%;
+  flex-direction: column;
+  width: 100%;
   justify-content: space-around;
   padding: 2% 3%;
 }
 
 
 .inner-container p {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 1.1em;
 }
 
 .inner-container h1 {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 4em;
 }
 
 .inner-container h2 {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 3.5em;
 }
 
 .inner-container h3 {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 3em;
 }
 
 .inner-container h4 {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 2em;
 }
 
 .inner-container h5 {
-  font-family: "Recursive", sans-serif;
+  font-family: 'Playfair Display', serif;
   font-optical-sizing: auto;
     font-size: 1.5em;
 }
@@ -98,13 +109,13 @@ font-family: "Dancing Script", cursive;
 
 
 .h1-style {
-  font-size: 4em;
-  font-weight: 600;
-  margin: 0%;
+  font-size: 3.2em;
+  font-weight: 700;
+  margin: 1% 0%;
 }
 
 .h4-style-author {
-  font-size: 1.6em;
+  font-size: 1.3em;
   color: black;
   margin: 0%;
 }
@@ -121,5 +132,136 @@ font-family: "Dancing Script", cursive;
 .p-style-1 {
   font-size: 1.1em;
   padding: 0%;
-  margin: 0% 1% 0px 0%;
+  margin: 0% 0.5% 0px 0%;
+}
+
+.flex-row {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.author-desc {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 22%;
+  height: fit-content;
+  min-height: 15vh;
+  margin: 0% 2% 0% 1%;
+  padding: 1%;
+  
+  /* border-radius: 16px; */
+  background: #e3e0da;
+    border-left: 1.5px solid #bab9b7;
+    border-right: 1.5px solid #bab9b7;
+
+    /* box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6; */
+}
+
+.tags-style {
+  display: flex;
+  flex-direction: row;
+  flex-direction: space-around;
+  width: 100%;
+  height: 10vh;
+  
+  border-radius: 16px;
+  background: #e3e0da;
+    border: 1.5px solid #bab9b7;
+}
+
+.sidebox-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 22%;
+  height: 30vh;
+  margin: 0% 2% 0% 1%;
+}
+
+.dislike-icon-style {
+  font-size: 4rem !important;
+}
+
+.dislike-icon-style:hover {
+  color: red;
+}
+
+.like-icon-style {
+  font-size: 4rem !important;
+}  
+
+.like-icon-style:hover {
+  color: green;
+}
+
+.review-request-style {
+  color: red;
+  margin: 1% 0% 0% 0%;
+}
+
+.like-desc-style {
+  margin: 1% 1%;
+}
+
+.profile-style {
+  text-align: center;
+  color: black;
+  font-size: 3rem !important;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.noClick {
+  pointer-events: none;
+}
+
+
+.first-img-style {
+  width: 90%;
+  margin: 2%;
+  border-radius: 12px;
+  filter: grayscale(0) !important;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .like-iiner-continer {
+    width: 100%; /* Adjust width to occupy full width */
+    margin-left: 0%; /* Remove left margin */
+  }
+
+  .inner-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    padding: 5% 3%; /* Increase padding for better spacing */
+  }
+
+  .inner-container img {
+    width: 100%; /* Make images occupy full width */
+    margin: 5% 0%; /* Adjust margin for better spacing */
+  }
+
+  .author-desc,
+  .sidebox-style {
+    width: 100%; /* Adjust width to occupy full width */
+    margin: 5% 0%; /* Adjust margin for better spacing */
+  }
+
+  .tags-style {
+    flex-direction: column; /* Stack tags vertically */
+    height: auto; /* Allow height to adjust based on content */
+    margin-bottom: 5%; /* Add bottom margin for better spacing */
+  }
 }

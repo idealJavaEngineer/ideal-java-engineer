@@ -2,7 +2,7 @@ import './SlidingBlogs.css';
 import SlideBlogItem from './SlideBlogItem';
 import SlideBlogItemActive from './SlideBlogItemActive';
 
-function SlidingBlogs() {
+function SlidingBlogs({blogsInfo}) {
 
     const preImageLink = "https://drive.google.com/uc?export=view&id=1t-1p97-2Y-IgBCTe88t5bujOuYfavBgR";
 
@@ -15,9 +15,9 @@ function SlidingBlogs() {
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
                     </ol>
                     <div className="carousel-inner">
-                        <SlideBlogItemActive imageLink={preImageLink} slideNum="first slide" />
-                        <SlideBlogItem imageLink={preImageLink} slideNum="Second slide" />
-                        <SlideBlogItem imageLink={preImageLink} slideNum="Third slide" />
+                        <SlideBlogItemActive imageLink={preImageLink} blogInfo={blogsInfo.mostLiked[0]} />
+                        <SlideBlogItem imageLink={preImageLink} blogInfo={blogsInfo.mostLiked[1]} />
+                        <SlideBlogItem imageLink={preImageLink} blogInfo={blogsInfo.mostLiked[2]} />
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>

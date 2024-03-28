@@ -22,11 +22,11 @@ function Navbar() {
         <div className="nav-option-container">
           <div className="nav-option-container-li"> 
             <button className='nav-option-style' onClick={() => dispatch(changeCurrentPageInstance('Home'))}><Link className="link-decoration" to="/home">Home</Link></button>
-            <button className='nav-option-style' onClick={() => dispatch(changeCurrentPageInstance('Blog'))}><Link className="link-decoration" to="/road-map">Road Maps</Link></button>
+            <button className='nav-option-style' onClick={() => dispatch(changeCurrentPageInstance('Blog'))}><Link className="link-decoration" to="/road-map">RoadMaps</Link></button>
             <button className='nav-option-style'><Link className="link-decoration" to="/tutorial">Tutorials</Link></button>
             <button className='nav-option-style'><Link className="link-decoration" to="/journal">Journals</Link></button>
             <button className='nav-option-style'><Link className="link-decoration" to="/review">Reviews</Link></button>
-            <button className='nav-option-style'><Link className="link-decoration" to="/about">About Us</Link></button>
+            <button className='nav-option-style'><Link className="link-decoration" to="/about">AboutUs</Link></button>
           </div>
         </div>
         {/* <div className="profile-container">

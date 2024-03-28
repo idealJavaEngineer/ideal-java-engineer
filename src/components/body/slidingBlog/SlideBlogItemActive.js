@@ -1,13 +1,24 @@
 import './SlideBlogItemActive.css';
 import backgroundImage1 from '../../../static/images/backgroundImage1.jpg';
 
-function SlideBlogItemActive(props) {
+function SlideBlogItemActive({blogInfo}) {
+
+    const getPublishedDate = (timestamp) => {
+        const date = new Date(timestamp);
+        return date.getDate() + "/" + date.toLocaleString('en', { month: 'long' }) + "/" + date.getFullYear();
+    }
+    
+    const routeToBlogPage = () => {
+        window.location.href = `http://localhost:3000/blog-post/${blogInfo.blogId}`;
+    }
+
     return (
-        <div className="carousel-item active">
-            <img className="d-block w-100 img-size" src={backgroundImage1} alt={props.slideNum} />
+        <div className="carousel-item active font-new-style mouse-icon" onClick={routeToBlogPage}>
+            <img className="d-block w-100 img-size" src={backgroundImage1} alt={blogInfo.blogName} />
             <div className="carousel-caption d-none d-md-block">
-                <h3>{props.slideNum}</h3>
-                <p>...</p>
+                <h1>{blogInfo.blogName}</h1>
+                <h3>published on : {getPublishedDate(blogInfo.publishedAt)}</h3>
+                <p>Author: {blogInfo.author.user.firstName + " " + blogInfo.author.user.lastName}</p>
             </div>
         </div>
     )

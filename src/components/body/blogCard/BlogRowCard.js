@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function BlogRowCard({ blogInfo }) {
+function BlogRowCard({ blogInfo, fontStyle}) {
     const [currentBlog, setCurrentBlog] = useState(blogInfo);
 
     const getPublishedDate = (timestamp) => {
@@ -16,8 +16,8 @@ function BlogRowCard({ blogInfo }) {
         <Link to={`/blog-post/${blogInfo.blogId}`} className='remove-underline'>
             <div className="card-container">
                 <div className="descr-row-container">
-                    <h2 className="h2-style kode-mono">{blogInfo.blogName}</h2>
-                    <p className="p-style kode-mono">{
+                    <h2 className={`h2-style ${fontStyle}` }>{blogInfo.blogName}</h2>
+                    <p className={`p-style ${fontStyle}`}>{
                         blogInfo.tags.map((tag, index) =>
                             <span  key={tag.id}>#{tag.tagName}</span>
                         )
