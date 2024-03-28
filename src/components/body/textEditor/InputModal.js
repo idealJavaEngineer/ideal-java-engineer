@@ -24,6 +24,13 @@ function InputModal({isModalData,setIsModalData}) {
         });
     }
 
+    const BlogImageUrlHandler = (event) => {
+        setIsModalData({
+            ...isModalData,
+            blogImageUrl : event.target.value
+        })
+    }
+
     return (
         <div className="form-container">
             <div className="field-container">
@@ -37,6 +44,10 @@ function InputModal({isModalData,setIsModalData}) {
             <div className="field-container">
                 <label>Category</label>
                 <input onChange={categoryNameHandler} placeholder="category name"></input>
+            </div>
+            <div className="field-container">
+                <label>Blog Image Url</label>
+                <input onChange={BlogImageUrlHandler} placeholder="Image Url"></input>    
             </div>
         </div>
     );

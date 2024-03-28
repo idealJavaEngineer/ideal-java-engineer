@@ -10,7 +10,8 @@ function CustomTextEditor() {
     const [isModalData, setIsModalData] = useState({
         tags : "",
         category : "",
-        blogName : ""
+        blogName : "",
+        blogImageUrl : "https://drive.google.com/uc?export=view&id=1t-1p97-2Y-IgBCTe88t5bujOuYfavBgR"
     });
 
     
@@ -19,6 +20,7 @@ function CustomTextEditor() {
            tags : isModalData.tags,
            category : isModalData.category,
            blogName : isModalData.blogName,
+           imageUrl : isModalData.blogImageUrl,
            blogContent :  editorOutput
         }
         UploadBlogPostUtility(1, blogPostData, callBackFunction);

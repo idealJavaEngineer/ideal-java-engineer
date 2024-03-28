@@ -1,5 +1,4 @@
 
-
 .home-container {
     background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
   };
@@ -50,10 +49,10 @@ margin: 1% 0%;
 
 .title-style {
     font-family: 'Playfair Display', serif;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 700;
     padding: 2% 2%; 
-    width: 52%;
+    width: 100%;
 }
 
 .vl {
@@ -63,7 +62,6 @@ margin: 1% 0%;
 
 .title-container {
     height: 19%;
-    padding-top: 2%;
     display: flex;
     justify-content: center;
     width: 100%;

@@ -12,30 +12,30 @@ function RoadMap() {
     const [defaultTag, setDefaulTag] = useState("tranding");
     const [tags, setTags] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        getInitialDataForScreen();
+    //     getInitialDataForScreen();
     
-    }, []) 
+    // }, []) 
     
-    const getInitialDataForScreen = () => {
-        const requestData = {
-            categoryName : "Tutorial",
-            pageNumber : "0"
-        }
-        getInitialDataForCategoryUtility(requestData, callBackFunction);
-    }
+    // const getInitialDataForScreen = () => {
+    //     const requestData = {
+    //         categoryName : "Road Map",
+    //         pageNumber : "0"
+    //     }
+    //     getInitialDataForCategoryUtility(requestData, callBackFunction);
+    // }
 
-    const callBackFunction = (response) => {
-        if(response === "failure") {
-            window.prompt(response);
-        } else {
-            setBlogsInfo(response.blogs);
-            setDefaulTag(response.defaultTag);
-            setTags(response.setTags);
+    // const callBackFunction = (response) => {
+    //     if(response === "failure") {
+    //         window.prompt(response);
+    //     } else {
+    //         setBlogsInfo(response.blogs);
+    //         setDefaulTag(response.defaultTag);
+    //         setTags(response.setTags);
 
-        }
-    }
+    //     }
+    // }
 
     return (
         <div >
@@ -47,34 +47,13 @@ function RoadMap() {
                 <div className="inner-container-blog">
                     <div className="opacity-on-title">
 
-                        <h1 className="heading-1">Road Maps</h1>
-                        <h3 className="hashtag-style">#{defaultTag.tagName}</h3>
+                        {/* <h1 className="heading-1-roadMap">Road Maps</h1> */}
+                        <h1 className="heading-1-roadMap">Work In Progress</h1>
+                    <h2 className="heading-1-roadMap">Currently No Road Map is Created.</h2>
+                        {/* <h3 className="hashtag-style">#{defaultTag.tagName}</h3> */}
                     </div>
-                    <div className="blogs-container">
-                        {
-                            blogsInfo.map((blog,index) => 
-                                <BlogRowCard key={index} blogInfo={blog} />
-                            )
-                        }
-                    </div>
-                    <div className='pagination-outer-container'>
-                        <nav className="" aria-label="Page navigation example">
-                            <ul className="pagination ">
-                                <li className="page-item li-width-inc">
-                                    <a className="page-link" href="#" aria-label="Previous">
-                                        <span className="text-color" aria-hidden="true">&laquo; Previous</span>
-                                    </a>
-                                </li>
-                                <li className="page-item li-width-inc">
-                                    <a className="page-link" href="#" aria-label="Next">
-                                        <span className="text-color" aria-hidden="true">Next &raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    
                 </div>
-                    <RightSearchBox title="Road Map" tags={tags}/>
             </div>
             <Footer />
         </div>

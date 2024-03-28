@@ -51,3 +51,8 @@ margin: 1% 0% 0% 0%;
 .max-height-hastag-container {
     overflow-y: scroll;
 }
+
+.desc-p-size {
+    font-size: 0.8rem;
+    margin-bottom: 1%;
+}

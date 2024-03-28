@@ -2,15 +2,24 @@ import './SlideBlogItem.css';
 import backgroundImage1 from '../../../static/images/backgroundImage1.jpg';
 
 
-function SlideBlogItem(props) {
+function SlideBlogItem({blogInfo}) {
+
+    const getPublishedDate = (timestamp) => {
+        const date = new Date(timestamp);
+        return date.getDate() + "/" + date.toLocaleString('en', { month: 'long' }) + "/" + date.getFullYear();
+    }
+
+    const routeToBlogPage = () => {
+        window.location.href = `http://localhost:3000/blog-post/${blogInfo.blogId}`;
+    }
 
     return (
-        <div className='carousel-item'>
-            <img className="d-block w-100 img-size" src={backgroundImage1} alt={props.slideNum} />
+        <div className='carousel-item font-new-style mouse-icon' onClick={routeToBlogPage}>
+            <img className="d-block w-100 img-size" src={backgroundImage1} alt={blogInfo.blogName} />
             <div className="carousel-caption d-none d-md-block">
-                <h1>Fiction or Non Fiction</h1>
-                <h3>which one is better ..?</h3>
-                <p>Simple question but complex answer lets discuss about it..</p>
+                <h1>{blogInfo.blogName}</h1>
+                <h3>published on : {getPublishedDate(blogInfo.publishedAt)}</h3>
+                <p>Author: {blogInfo.author.user.firstName + " " + blogInfo.author.user.lastName}</p>
             </div>
         </div>
     )

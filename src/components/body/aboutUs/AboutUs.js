@@ -1,12 +1,14 @@
-
-import { useParams } from 'react-router-dom';
+import './AboutUs.css';
+import Footer from '../../footer/Footer';
 
 function AboutUs() {
-    let {id} = useParams();
+    
     return (
-        <pre>
-            <p>{id}</p>
-        </pre>
+        <div >
+                   
+                            <Footer />
+                    
+        </div>
     )
 }
 

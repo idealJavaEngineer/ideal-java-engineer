@@ -10,4 +10,12 @@
   transition: filter 1s ease-in-out;
 }  
 
+.font-new-style {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 660;
+}
 
+.mouse-icon:hover {
+  cursor: pointer;
+}

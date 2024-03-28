@@ -42,12 +42,12 @@
     /* You can also apply other styles as needed */
 }
 
-.heading-1 {
+.heading-1-review {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 5.3rem;
     margin: 1% 1% 0% 3%;
-    color: rgb(35, 35, 110);
+    color: #4e8a82;
 }
 
 
@@ -55,7 +55,7 @@
     font-family: 'Playfair Display', serif;
     margin-left: 5%;
     margin-bottom: 5%;
-
+    color: blue;
 }
 
 .inner-container-blog {
@@ -84,6 +84,7 @@
     border-radius: 16px;
     background: #e1e1e1;
     box-shadow: 6px 27px 21px #c4c4c4, -23px -26px 62px #b6b6b6;
+    color: black;
 }
 
 .hashtag-search-container:hover {

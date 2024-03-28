@@ -116,7 +116,7 @@ function LearnPage() {
                                     <div className="blogs-container">
                                         {
                                             blogsInfo.map((blog, index) =>
-                                                <BlogRowCard key={index} blogInfo={blog} />
+                                                <BlogRowCard key={index} blogInfo={blog} fontStyle="kode-mono"/>
                                             )
                                         }
                                     </div>
