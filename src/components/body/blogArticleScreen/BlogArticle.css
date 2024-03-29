@@ -226,8 +226,8 @@ font-family: "Dancing Script", cursive;
 
 
 .first-img-style {
-  width: 90%;
-  margin: 2%;
+  width: 100% !important;
+  margin: 0% !important;
   border-radius: 12px;
   filter: grayscale(0) !important;
   transition-duration: 0.5s;
