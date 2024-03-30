@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import Navbar from './components/header/Navbar';
 import CustomTextEditor from './components/body/textEditor/CustomTextEditor';
 import {
-  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
@@ -21,18 +20,18 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Routes>
-        <Route exact path='/' element={<Home />}></Route>
-        <Route exact path='/home' element={<Home />}></Route>
-        <Route exact path='/road-map' element={<RoadMap />}></Route>
-        <Route exact path='/tutorial' element={<LearnPage />}></Route>
-        <Route exact path='/journal' element={<JournalsPage />}></Route>
-        <Route exact path='/review' element={<ReviewsPage />}></Route>
-        <Route exact path='/about' element={<AboutUs />}></Route>
-        <Route exact path='/admin' element={<AdminPage />}></Route>
-        <Route exact path='/text-editor' element={<CustomTextEditor />}></Route>
-        <Route exact path='/blog-post/:id' element={<BlogArticle />}></Route>
-      </Routes>
+        <Routes >
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/home' element={<Home />}></Route>
+          <Route path='/road-map' element={<RoadMap />}></Route>
+          <Route path='/tutorial' element={<LearnPage />}></Route>
+          <Route path='/journal' element={<JournalsPage />}></Route>
+          <Route path='/review' element={<ReviewsPage />}></Route>
+          <Route path='/about' element={<AboutUs />}></Route>
+          <Route path='/admin' element={<AdminPage />}></Route>
+          <Route path='/text-editor' element={<CustomTextEditor />}></Route>
+          <Route path='/blog-post/:id' element={<BlogArticle />}></Route>
+        </Routes>
     </div>
   );
 }

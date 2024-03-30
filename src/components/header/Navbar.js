@@ -3,7 +3,6 @@ import dtdJournalLogo from '../../static/images/ideal-java-engineer-logos.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeCurrentPageInstance } from '../../store/slices/CurrentPageSlice';
 import {  
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
