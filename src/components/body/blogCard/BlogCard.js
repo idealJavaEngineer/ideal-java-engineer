@@ -19,7 +19,7 @@ function BlogCard({ blogInfo }) {
                     (
                         <div className="blog-container" onClick={routeToBlogPage}>
                             <div className="image-container">
-                                <img className="image-decoration" src={backgroundImage1} alt={blogInfo.blogName} />
+                                <img className="image-decoration" src={blogInfo.imageUrl} alt={blogInfo.blogName} />
                             </div>
                             <div className="descr-container">
                                 <h3 className="desc-h3">{blogInfo.blogName}</h3>
