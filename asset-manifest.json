@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ideal-java-engineer/static/css/main.6dbc5968.css",
+    "main.js": "/ideal-java-engineer/static/js/main.e6a7dc39.js",
+    "static/js/453.dde717e0.chunk.js": "/ideal-java-engineer/static/js/453.dde717e0.chunk.js",
+    "static/media/backgroundImage1.jpg": "/ideal-java-engineer/static/media/backgroundImage1.799a30b8cc5a53e77d64.jpg",
+    "static/media/ideal-java-engineer-logos-footer.png": "/ideal-java-engineer/static/media/ideal-java-engineer-logos-footer.fb907d64f706d6340b7f.png",
+    "static/media/ideal-java-engineer-logos.png": "/ideal-java-engineer/static/media/ideal-java-engineer-logos.43bcf51bf54780205f5f.png",
+    "index.html": "/ideal-java-engineer/index.html",
+    "main.6dbc5968.css.map": "/ideal-java-engineer/static/css/main.6dbc5968.css.map",
+    "main.e6a7dc39.js.map": "/ideal-java-engineer/static/js/main.e6a7dc39.js.map",
+    "453.dde717e0.chunk.js.map": "/ideal-java-engineer/static/js/453.dde717e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6dbc5968.css",
+    "static/js/main.e6a7dc39.js"
+  ]
+}
