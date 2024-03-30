@@ -4,7 +4,7 @@ import backgroundImage1 from '../../../static/images/backgroundImage1.jpg';
 function BlogCard({ blogInfo }) {
 
     const routeToBlogPage = () => {
-        window.location.href = `http://localhost:3000/blog-post/${blogInfo.blogId}`;
+        window.location.href = `${process.env.PUBLIC_URL}/blog-post/${blogInfo.blogId}`;
     }
 
     const getPublishedDate = (timestamp) => {
