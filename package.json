@@ -39,8 +39,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -63,5 +61,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://idealJavaEngineer.github.io/ideal-java-engineer"
+  "homepage": "https://ideal-java-engineer"
 }
