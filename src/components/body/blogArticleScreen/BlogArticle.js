@@ -12,6 +12,10 @@ const BlogArticle = () => {
     const { id } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [disableLike, setDisableLike] = useState("");
+    const [imageDimension, setImageDimension] = useState({
+        height : 800,
+        width : 1000
+    });
 
     useEffect(() => {
         getBlogContent(id);
@@ -24,6 +28,13 @@ const BlogArticle = () => {
     const callBackFunction = (response) => {
         if (response != "failed") {
             setBlogData(response);
+            updateImageDimension(response);
+        }
+    }
+
+    const updateImageDimension = (data) => {
+        if(data.imageUrl != null) {
+            
         }
     }
 
@@ -78,9 +89,8 @@ const BlogArticle = () => {
                             <div className="flex-row">
                                 <div className="like-iiner-continer">
                                     <div className="inner-container">
-                                        {
-                                            blogData.imageUrl != null ? (<img src={blogData.imageUrl} className="first-img-style"/>) : (<></>)
-                                        }
+                                    <div className='blogpost-image-position'  style={{ backgroundImage: `url(${blogData.imageUrl})` , backgroundSize: `${imageDimension.height}px ${imageDimension.width}px`, backgroundPosition: "center"}} >
+                                    </div>    
                                         <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
                                     </div>
                                     <p className="review-request-style">*If you like this article, please give it a Thumbs Up or Thumbs Down vice versa.</p>
