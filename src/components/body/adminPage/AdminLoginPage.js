@@ -47,7 +47,7 @@ const AdminLoginPage = ({ setisLoggedIn }) => {
                     placeholder="Enter Password" required
                     onChange={passwordHandler} />
 
-                <div class="wrap">
+                <div className="wrap">
                     <button type="submit"
                         className="login-button"
                         onClick={loginUser} >

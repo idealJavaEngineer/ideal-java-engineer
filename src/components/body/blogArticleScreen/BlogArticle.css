@@ -265,3 +265,9 @@ font-family: "Dancing Script", cursive;
     margin-bottom: 5%; /* Add bottom margin for better spacing */
   }
 }
+
+.blogpost-image-position {
+  width: 1070px;
+  height: 550px;
+  border-radius: 12px;
+}
