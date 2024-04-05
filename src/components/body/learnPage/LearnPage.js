@@ -2,21 +2,33 @@ import React, { useEffect, useState } from 'react';
 import BlogRowCard from '../blogCard/BlogRowCard';
 import './LearnPage.css';
 import Footer from '../../footer/Footer';
-import getInitialDataForCategoryUtility from '../../../utilities/categoryScreenDataUtility';
+import getInitialDataForCategoryUtility, {getSearchBlogPostInfoServiceUtility} from '../../../utilities/categoryScreenDataUtility';
 import RightSearchBox from '../rightSearchBox/RightSearchBox';
 
 function LearnPage() {
 
+    const categoryName = "Tutorial";
     const [blogsInfo, setBlogsInfo] = useState([]);
     const [currTag, setCurrTag] = useState({ id : -1, tagName : "trending"});
     const [tags, setTags] = useState([]);
     const [loading, setLoading] = useState(true);
     const [pageNumber, setPageNumber] = useState(0);
+    const [searchBlogsInfo, setsearchBlogsInfo] = useState([]);
 
     useEffect(() => {
         getInitialDataForScreen(0, -1);
-
+        getSearchBlogInfo();
     }, [])
+
+    const getSearchBlogInfo = () => {
+        getSearchBlogPostInfoServiceUtility(categoryName, searchBlogsCallBackMethod);
+    }
+
+    const searchBlogsCallBackMethod = (response) => {
+        if(response != "failure") {
+            setsearchBlogsInfo(response);
+        }
+    }
 
     const paginationPrevButtonCss = (currPageNumber) => {
         if (currPageNumber < 0) {
@@ -56,7 +68,7 @@ function LearnPage() {
 
     const getInitialDataForScreen = (currPageNumber, tagId) => {
         const requestData = {
-            categoryName: "Tutorial",
+            categoryName: categoryName,
             pageNumber: currPageNumber.toString(),
             tagId: tagId.toString()
         }
@@ -122,7 +134,7 @@ function LearnPage() {
                                     </div>
                                 </div>
                                 {tags != [] ? (
-                                    <RightSearchBox tags={tags} updateCurrTag={updateCurrTag} categoryName="Tutorials" />
+                                    <RightSearchBox tags={tags} searchblogsInfo={searchBlogsInfo} updateCurrTag={updateCurrTag} categoryName="Tutorials" />
                                 ) :
                                     (<div>Loading tags..</div>)
                                 }
