@@ -78,7 +78,7 @@
     margin: 3% 1%;
     padding: 1%;
     width: 21%;
-    min-height:40vh;
+    min-height:400px;
     max-height:60vh;
     /* border: 3px solid rgba(0, 0, 0, 0.549); */
     border-radius: 16px;
@@ -148,6 +148,7 @@
 
 .search-block-style {
     height: 81%;
+    cursor:pointer;
 }
 
 .search-text-style {

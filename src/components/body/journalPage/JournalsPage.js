@@ -2,21 +2,34 @@ import React, { useEffect, useState } from 'react';
 import BlogRowCard from '../blogCard/BlogRowCard';
 import './JournalsPage.css';
 import Footer from '../../footer/Footer';
-import getInitialDataForCategoryUtility from '../../../utilities/categoryScreenDataUtility';
+import getInitialDataForCategoryUtility, {getSearchBlogPostInfoServiceUtility} from '../../../utilities/categoryScreenDataUtility';
 import RightSearchBox from '../rightSearchBox/RightSearchBox';
 
 function JournalsPage() {
 
+    const categoryName = "Journal";
     const [blogsInfo, setBlogsInfo] = useState([]);
     const [currTag, setCurrTag] = useState({ id : -1, tagName : "trending"});
     const [tags, setTags] = useState([]);
     const [loading, setLoading] = useState(true);
     const [pageNumber, setPageNumber] = useState(0);
+    const [searchBlogsInfo, setsearchBlogsInfo] = useState([]);
 
     useEffect(() => {
         getInitialDataForScreen(0, -1);
-
+        getSearchBlogInfo();
     }, [])
+
+    const getSearchBlogInfo = () => {
+        getSearchBlogPostInfoServiceUtility(categoryName, searchBlogsCallBackMethod);
+    }
+
+    const searchBlogsCallBackMethod = (response) => {
+        if(response != "failure") {
+            setsearchBlogsInfo(response);
+        }
+    }
+
 
     const paginationPrevButtonCss = (currPageNumber) => {
         if (currPageNumber < 0) {
@@ -56,7 +69,7 @@ function JournalsPage() {
 
     const getInitialDataForScreen = (currPageNumber, tagId) => {
         const requestData = {
-            categoryName: "Journal",
+            categoryName: categoryName,
             pageNumber: currPageNumber.toString(),
             tagId: tagId.toString()
         }
@@ -122,7 +135,7 @@ function JournalsPage() {
                                     </div>
                                 </div>
                                 {tags != [] ? (
-                                    <RightSearchBox tags={tags} updateCurrTag={updateCurrTag} categoryName="Tutorials" />
+                                    <RightSearchBox tags={tags} updateCurrTag={updateCurrTag}  searchblogsInfo={searchBlogsInfo} categoryName="Journals" />
                                 ) :
                                     (<div>Loading tags..</div>)
                                 }

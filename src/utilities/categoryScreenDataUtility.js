@@ -1,4 +1,4 @@
-import getInitialDataForCategoryScreen from "../services/categoryScreenDataService"
+import getInitialDataForCategoryScreen, {getSearchBlogPostInfoService} from "../services/categoryScreenDataService"
 
 
 const getInitialDataForCategoryUtility = (requestData, callBackFunction) => {
@@ -11,5 +11,16 @@ const getInitialDataForCategoryUtility = (requestData, callBackFunction) => {
     callBackFunction("failure");
   })
 } 
+
+export const getSearchBlogPostInfoServiceUtility = (blogName, callBackFunction) => {
+  
+  const promise = getSearchBlogPostInfoService(blogName);
+  promise.then((response) => {
+    callBackFunction(response.data);
+  })
+  .catch((error) => {
+    callBackFunction("failure");
+  })
+}
 
 export default getInitialDataForCategoryUtility;
