@@ -7,6 +7,10 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
 import { likeBlogPostUtility, dislikeBlogPostUtility } from "../../../utilities/likeDislikeBlogPostUtility";
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
+import currImage from '../../../static/images/java-env-setup.png';
+
+
+
 
 const BlogArticle = () => {
     const { id } = useParams();
@@ -67,6 +71,7 @@ const BlogArticle = () => {
                     (<div className="screen-background">
                         <div className="blog-outer-container">
                             <div className="heading-container">
+                            
                                 <h1 className="h1-style">{blogData.blogName}</h1>
                                 <p className="p-style-1">published on : {getPublishedDate(blogData.publishedAt)}</p>
                                 {
@@ -78,9 +83,10 @@ const BlogArticle = () => {
                             <div className="flex-row">
                                 <div className="like-iiner-continer">
                                     <div className="inner-container">
-                                        {
+                                        {/* {
                                             blogData.imageUrl != null ? (<img src={blogData.imageUrl} className="first-img-style"/>) : (<></>)
-                                        }
+                                        } */}
+                                        <img src='https://ideal-java-engineer.s3.ap-south-1.amazonaws.com/java-env-setup-1.png' className="first-img-style"/>
                                         <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
                                     </div>
                                     <p className="review-request-style">*If you like this article, please give it a Thumbs Up or Thumbs Down vice versa.</p>
