@@ -15,6 +15,7 @@ import JournalsPage from './components/body/journalPage/JournalsPage';
 import ReviewsPage from './components/body/reviewPage/ReviewsPage';
 import AboutUs from './components/body/aboutUs/AboutUs';
 import BlogArticle from './components/body/blogArticleScreen/BlogArticle';
+import RoadMapScreen from './components/body/roadMap/RoadMapScreen';
 
 function App() {
   const currPageState = useSelector((state) => state.currentPageState.currentPageInstance);
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/admin' element={<AdminPage />}></Route>
         <Route exact path='/text-editor' element={<CustomTextEditor />}></Route>
         <Route exact path='/blog-post/:id' element={<BlogArticle />}></Route>
+        <Route exact path='/road-map/:id' element={<RoadMapScreen />}></Route>
       </Routes>
     </div>
   );

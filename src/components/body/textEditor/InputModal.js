@@ -45,10 +45,6 @@ function InputModal({isModalData,setIsModalData}) {
                 <label>Category</label>
                 <input onChange={categoryNameHandler} placeholder="category name"></input>
             </div>
-            <div className="field-container">
-                <label>Blog Image Url</label>
-                <input onChange={BlogImageUrlHandler} placeholder="Image Url"></input>    
-            </div>
         </div>
     );
 }

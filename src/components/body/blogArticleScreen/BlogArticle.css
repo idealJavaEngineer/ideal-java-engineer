@@ -81,8 +81,9 @@ font-family: "Dancing Script", cursive;
 }
 
 .inner-container img {
-  width: 90%;
+  width: 95%;
   margin: 2%;
+  max-width: 1020px;
   border-radius: 12px;
   filter: grayscale(1);
   transition-duration: 0.5s;
