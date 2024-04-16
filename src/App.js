@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import Navbar from './components/header/Navbar';
 import CustomTextEditor from './components/body/textEditor/CustomTextEditor';
 import {
-  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";

@@ -9,7 +9,7 @@ function SlideBlogItemActive({blogInfo}) {
     }
     
     const routeToBlogPage = () => {
-        window.location.href = `http://localhost:3000/blog-post/${blogInfo.blogId}`;
+        window.location.href = `${process.env.PUBLIC_URL}/blog-post/${blogInfo.blogId}`;
     }
 
     return (
