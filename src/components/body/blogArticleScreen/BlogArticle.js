@@ -7,14 +7,15 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
 import { likeBlogPostUtility, dislikeBlogPostUtility } from "../../../utilities/likeDislikeBlogPostUtility";
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
+import CoverImage from '../../../static/images/graph-intro-cover-image.jpg';
 
 const BlogArticle = () => {
     const { id } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [disableLike, setDisableLike] = useState("");
     const [imageDimension, setImageDimension] = useState({
-        height : 800,
-        width : 1000
+        height: 800,
+        width: 1000
     });
 
     useEffect(() => {
@@ -33,8 +34,8 @@ const BlogArticle = () => {
     }
 
     const updateImageDimension = (data) => {
-        if(data.imageUrl != null) {
-            
+        if (data.imageUrl != null) {
+
         }
     }
 
@@ -89,18 +90,17 @@ const BlogArticle = () => {
                             <div className="flex-row">
                                 <div className="like-iiner-continer">
                                     <div className="inner-container">
-                                    <div className='blogpost-image-position'  style={{ backgroundImage: `url(${blogData.imageUrl})` , backgroundSize: `${imageDimension.height}px ${imageDimension.width}px`, backgroundPosition: "center"}} >
-                                    </div>    
+                                        <img className='blogpost-image-position' src={CoverImage} />
                                         <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
                                     </div>
                                     <p className="review-request-style">*If you like this article, please give it a Thumbs Up or Thumbs Down vice versa.</p>
                                     <div className="like-button-container">
                                         <div className="like-desc-style">
-                                            <ThumbUpOutlinedIcon className="like-icon-style"  style={{pointerEvents: disableLike}} onClick={likeBlogPost} />
+                                            <ThumbUpOutlinedIcon className="like-icon-style" style={{ pointerEvents: disableLike }} onClick={likeBlogPost} />
                                             <p>{blogData.likes}</p>
                                         </div>
                                         <div className="like-desc-style">
-                                            <ThumbDownOutlinedIcon className="dislike-icon-style" style={{pointerEvents: disableLike}} onClick={dislikeBlogPost} />
+                                            <ThumbDownOutlinedIcon className="dislike-icon-style" style={{ pointerEvents: disableLike }} onClick={dislikeBlogPost} />
                                             <p>{blogData.dislikes}</p>
                                         </div>
                                     </div>

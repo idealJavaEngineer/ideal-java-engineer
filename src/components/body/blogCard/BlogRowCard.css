@@ -19,7 +19,7 @@
     filter: grayscale(1);
     transition: filter 0.5s ease-in-out;
     box-shadow: 10px 1px 13px rgba(69, 69, 69, 0.74);
-    height: 238px;
+    height: 208px;
 }
 
 .card-container:hover {
