@@ -3,6 +3,7 @@ import './CustomTestEditor.css';
 import { useState } from 'react';
 import InputModal from "./InputModal";
 import UploadBlogPostUtility from '../../../utilities/uploadBlogPostUtility';
+import {uploadCoverImageUtility} from '../../../utilities/s3ImageCrudUtility';
 
 function CustomTextEditor() {
     const [editorOutput, setEditorOutput] = useState("");
@@ -13,6 +14,7 @@ function CustomTextEditor() {
         blogName: "",
         blogImageUrl: "https://drive.google.com/uc?export=view&id=1t-1p97-2Y-IgBCTe88t5bujOuYfavBgR"
     });
+    const currBlogId = -1;
 
 
     const submitTheBlog = () => {
@@ -27,7 +29,18 @@ function CustomTextEditor() {
     }
 
     const callBackFunction = (response) => {
-        alert(response);
+        console.log(response);
+        currBlogId = response.blogId;
+    }
+
+    const submitCoverImage = () => {
+        const fileInput = document.getElementById('imageInput');
+        const file = fileInput.files[0];
+        uploadCoverImageUtility(2, file, callBackForImageUpload);
+    }
+
+    const callBackForImageUpload = (response) => {
+        console.log(response);
     }
 
     return (
@@ -41,9 +54,12 @@ function CustomTextEditor() {
                     <InputModal isModalData={isModalData} setIsModalData={setIsModalData} />
                     <button className='save-blog-button' onClick={submitTheBlog}>Save And Publish</button>
                     <p>*please upload the cover image if available its size should be less then 800KB</p>
+                    
                     <div className="upload-image-container">
-                        <input type="file" name="image" accept="image/*"></input>
-                        <button className='save-blog-button' onClick={submitTheBlog} >Upload Blog Cover Image</button>
+                        <form id="uploadForm" encType="multipart/form-data">
+                            <input type="file" id="imageInput" name="image" accept="image/*"/>
+                            <button className='save-blog-button' type="button" onClick={submitCoverImage}>Upload</button>
+                        </form>
                     </div>
                 </div>
             </div>

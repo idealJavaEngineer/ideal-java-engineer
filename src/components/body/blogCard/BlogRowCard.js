@@ -19,7 +19,7 @@ function BlogRowCard({ blogInfo, fontStyle}) {
                     <h2 className={`h2-style ${fontStyle}` }>{blogInfo.blogName}</h2>
                     <p className={`p-style ${fontStyle}`}>{
                         blogInfo.tags.map((tag, index) =>
-                            <span  key={tag.id}>#{tag.tagName}</span>
+                            <span  key={tag.id}>#{tag.tagName} </span>
                         )
                     }</p>
                     <p className="p-style-date kode-mono">published on : {getPublishedDate(blogInfo.publishedAt)}</p>

@@ -137,12 +137,6 @@ const RoadMapScreen = ({roadmapInfo}) => {
             <div className="content-opt">Suggested Problems</div>
             <div className="content-opt border-right-radius">Q&A</div>
           </div>
-
-          <div className="item-blog-container">
-            <div>
-              <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
-            </div>
-          </div>
         </div>
       </div>
     </div>
