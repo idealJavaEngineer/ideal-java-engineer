@@ -42,7 +42,7 @@ code {
 }
 
 pre {
-    background-color: black;
+    background-color: #646464;
 }
 
 .output-border {
@@ -66,6 +66,6 @@ pre {
     font-size: 16px;
 }
 
-.upload-image-container {
+upload-image-container {
 
 }

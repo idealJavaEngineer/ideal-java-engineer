@@ -7,7 +7,6 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
 import { likeBlogPostUtility, dislikeBlogPostUtility } from "../../../utilities/likeDislikeBlogPostUtility";
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
-import CoverImage from '../../../static/images/graph-intro-cover-image.jpg';
 
 const BlogArticle = () => {
     const { id } = useParams();
@@ -17,6 +16,7 @@ const BlogArticle = () => {
         height: 800,
         width: 1000
     });
+    const coverImage = "https://ideal-java-engineer-01.s3.ap-south-1.amazonaws.com/";
 
     useEffect(() => {
         getBlogContent(id);
@@ -90,7 +90,7 @@ const BlogArticle = () => {
                             <div className="flex-row">
                                 <div className="like-iiner-continer">
                                     <div className="inner-container">
-                                        <img className='blogpost-image-position' src={CoverImage} />
+                                        <img className='blogpost-image-position' src={coverImage + blogData.imageUrl} />
                                         <div dangerouslySetInnerHTML={{ __html: blogData.content }} />
                                     </div>
                                     <p className="review-request-style">*If you like this article, please give it a Thumbs Up or Thumbs Down vice versa.</p>
