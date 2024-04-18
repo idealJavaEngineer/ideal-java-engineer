@@ -83,7 +83,6 @@ font-family: "Dancing Script", cursive;
 .inner-container img {
   width: 95%;
   margin: 2%;
-  max-width: 1020px;
   border-radius: 12px;
   filter: grayscale(1);
   transition-duration: 0.5s;
@@ -268,7 +267,7 @@ font-family: "Dancing Script", cursive;
 }
 
 .blogpost-image-position {
-  width: 1070px;
+  width: auto;
   height: 550px;
   border-radius: 12px;
 }
