@@ -3,6 +3,7 @@ import java.util.*;
 class Pair {
   int node;
   int level;
+  
   public Pair(int node, int level) {
     this.node = node;
     this.level = level;

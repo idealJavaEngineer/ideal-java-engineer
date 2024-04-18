@@ -36,7 +36,7 @@ function CustomTextEditor() {
     const submitCoverImage = () => {
         const fileInput = document.getElementById('imageInput');
         const file = fileInput.files[0];
-        uploadCoverImageUtility(2, file, callBackForImageUpload);
+        uploadCoverImageUtility(currBlogId, file, callBackForImageUpload);
     }
 
     const callBackForImageUpload = (response) => {
