@@ -41,12 +41,13 @@
 }
 
 .logo-style {
-    height: 47px;
-    width: 150px;
+    height: 58px;
+    width: 116px;
+    border-radius: 0% !important;
 }
 
 .profile-container {
-    width: 6%
+    width: 6%;
 
 }
 

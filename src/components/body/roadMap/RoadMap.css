@@ -15,7 +15,9 @@
     display: none;
 }
 
-
+.roadmap-outer-container {
+    background: #f9f7f1 url("https://assets.codepen.io/618359/halftone_1.png");
+  }
 
 .body-container {
     display: flex;
@@ -38,10 +40,10 @@
     margin-bottom: 1%;
 }
 
-.inner-container-blog {
+.inner-container-roadmap {
     display: flex;
     flex-direction: column;
-    width: 82%;
+    width: 100%;
     text-align: left;
 }
 
@@ -114,4 +116,10 @@
 }
 .max-height-hastag-container {
     height: auto;
+}
+
+.footer-position {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

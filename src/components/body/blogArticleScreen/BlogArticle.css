@@ -45,13 +45,13 @@ font-family: "Dancing Script", cursive;
 
 
 .inner-container p {
-  font-family: 'Playfair Display', serif;
+  font-family: "euclid_circular_a", "Arial", "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-optical-sizing: auto;
     font-size: 1.1em;
 }
 
 .inner-container h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "euclid_circular_a", "Arial", "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-optical-sizing: auto;
     font-size: 4em;
 }
@@ -81,12 +81,13 @@ font-family: "Dancing Script", cursive;
 }
 
 .inner-container img {
-  width: 90%;
+  width: 95%;
   margin: 2%;
   border-radius: 12px;
   filter: grayscale(1);
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
+  object-fit: contain !important;
 }
 
 .inner-container img:hover {
@@ -100,7 +101,6 @@ font-family: "Dancing Script", cursive;
   text-align: left;
   background-color: #646464; /* Background color */
   padding: 1% 2%; /* Padding around the code */
-  border: 1px solid #ddd;
   border-radius: 2px; /* Rounded corners */
   font-family: "Kode Mono", monospace !important;
   font-size: 0.9em; 
@@ -265,4 +265,10 @@ font-family: "Dancing Script", cursive;
     height: auto; /* Allow height to adjust based on content */
     margin-bottom: 5%; /* Add bottom margin for better spacing */
   }
+}
+
+.blogpost-image-position {
+  width: auto;
+  height: 550px;
+  border-radius: 12px;
 }

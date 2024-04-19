@@ -4,7 +4,7 @@ const UploadBlogPostUtility = (userId, blogData , getResponse) => {
 
     const promise = uploadBlogPost(userId, blogData);
     promise.then((response) => {
-        getResponse('success');
+        getResponse(response.data);
     })
     .catch((error) => {
         getResponse('failure');
