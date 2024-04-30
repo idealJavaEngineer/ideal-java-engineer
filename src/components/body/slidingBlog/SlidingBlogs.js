@@ -16,11 +16,11 @@ function SlidingBlogs({blogsInfo}) {
                         <SlideBlogItem imageLink={blogsInfo.mostLiked[1].imageUrl} blogInfo={blogsInfo.mostLiked[1]} />
                         <SlideBlogItem imageLink={blogsInfo.mostLiked[2].imageUrl} blogInfo={blogsInfo.mostLiked[2]} />
                     </div>
-                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                    <a className="carousel-control-prev navigation-style" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="sr-only">Previous</span>
                     </a>
-                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                    <a className="carousel-control-next navigation-style" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
                         <span className="sr-only">Next</span>
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>

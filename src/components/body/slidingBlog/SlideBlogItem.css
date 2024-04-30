@@ -1,6 +1,6 @@
 .img-size {
-    height : 680px;
-    width : 512px;  
+  height: 723px;
+  width : 512px;  
     filter: grayscale(1);
     transition: filter 0.5s ease-in-out;
   }
@@ -18,4 +18,10 @@
 
 .mouse-icon:hover {
   cursor: pointer;
+}
+
+.info-style {
+  color: #575d94;
+  background-color: rgba(160, 160, 160, 0.19);
+  border-radius: 14px;
 }
