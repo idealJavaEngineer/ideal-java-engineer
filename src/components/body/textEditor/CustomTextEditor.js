@@ -14,7 +14,6 @@ function CustomTextEditor() {
         blogName: "",
         blogImageUrl: "https://drive.google.com/uc?export=view&id=1t-1p97-2Y-IgBCTe88t5bujOuYfavBgR"
     });
-    const currBlogId = -1;
 
 
     const submitTheBlog = () => {
@@ -30,17 +29,19 @@ function CustomTextEditor() {
 
     const callBackFunction = (response) => {
         console.log(response);
-        currBlogId = response.blogId;
+        localStorage.setItem("currBlogId", response.blogId);
     }
 
     const submitCoverImage = () => {
         const fileInput = document.getElementById('imageInput');
         const file = fileInput.files[0];
-        uploadCoverImageUtility(currBlogId, file, callBackForImageUpload);
+        const blogId = localStorage.getItem("currBlogId");
+        uploadCoverImageUtility(blogId, file, callBackForImageUpload);
     }
 
     const callBackForImageUpload = (response) => {
         console.log(response);
+        localStorage.removeItem("currBlogId");
     }
 
     return (

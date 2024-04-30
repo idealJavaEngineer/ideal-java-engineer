@@ -3,7 +3,7 @@
   }
 
 .img-size {
-  height : 680px;
+  height: 723px;
   width : 512px;  
 }
 
@@ -17,9 +17,17 @@
   flex-direction: row;
   padding:0% 0.7%;
   width: 69%;
+  height: 723px;
 }
 
 .container-dimension {
   width: 100%;
   border: 2px solid black;
+}
+
+.navigation-style {
+  color: #fff;
+  height: 723px;
+  background-color: #aeaeaea3;
+  width: 6%;
 }

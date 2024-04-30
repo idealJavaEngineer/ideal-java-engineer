@@ -1,16 +1,6 @@
 import java.util.*;
 
-class Pair {
-  int node;
-  int level;
-  
-  public Pair(int node, int level) {
-    this.node = node;
-    this.level = level;
-  }
-}
-
-class GraphBFS {
+class Disjoint {
     public static void main(String[] args) throws Exception{
       // n is no. of nodes.
       Scanner scan = new Scanner(System.in);
@@ -31,33 +21,62 @@ class GraphBFS {
       }
 
       // array of size no. of nodes all assigned to false by default
-      boolean[] isVisited = new boolean[n];
-      Queue<Pair> q = new LinkedList<>();
-      //we start by adding start Node in Queue and start traversing from there
-      //let say level of starting node is 0
-      int stNode = 0;
-      q.add(new Pair(stNode, 0));
-      //set isVisited of start Node to true as it is visited because we start from here
-      isVisited[stNode] = true;
-
-      //as we know queue contains the node of curr level from where we get next level nodes 
-      //We going to traverse it until q is empty that means no nodes left in graph now to be traversed
-      while(!q.isEmpty()) {
-        Pair pair = q.poll();
-        int currNode = pair.node;
-        int currLevel = pair.level;
-        //now from the adj list we gonna traverse all the adjacent node of currNode we poll from the queue
-        //the traversed node we be next level nodes for us
-        for(int x : adj[currNode]) {
-          //check if not already Visited
-          if(!isVisited[x]) {
-            //add the pair with increased level in queue as they belong to next Level.
-            q.add(new Pair(x, currLevel + 1));
-            //as we push it in queue so that we can get the adjacent node of the node we just pushed
-            //mark is asVisited
-            isVisited[x] = true;
-          }
-        }
+      int[] connected = new int[n];
+      int[] size = new int[n];
+      for(int i=0;i<n;i++) {
+        //everyone is its own parent
+        connected[i] = i;
+        size[i] = 1;
       }
     }
+
+    /**
+     * We going to check which node a or b have more no. of child and that going to 
+     * be the parent of other
+     * as soon as parent one is set as parent of other it will also,
+     */
+    public static void union(int[] connected, int[] size, int a , int b) {
+      int rootA = root(connected, a);
+      int rootB = root(connected, b);
+      if(size[rootA] > size[rootB]) {
+        size[rootA] += size[rootB];
+        connected[rootB] = connected[rootA];
+      } else {
+        size[rootB] += size[rootA];
+        connected[rootA] = connected[rootB];
+      }
+    }
+    
+    /**
+     * root method will return the root of the tree to which the node x is connected
+     */
+    private static int root(int[] connected, int x) {
+      while(connected[ x ] != x)
+      {
+        connected[ x ] = connected[ connected[ x ] ] ; 
+        x = connected[ x ]; 
+      }
+      return x;
+    }
+    
+    
+    /**
+     * find method will return boolean value based on if node are part of same connected graph
+     */
+    public static boolean find(int[] connected, int a, int b) {
+      if(root(connected, a) != root(connected, b)) {
+        return false;
+      }
+      return true;
+    }
+    
+}
+
+public void union(int a, int b) {
+	int currA = connect[a];
+	for(int i=0;i<N;i++) {
+		if(connect[i] == currA) {
+			connect[i] = connect[b];
+		}
+	}
 }

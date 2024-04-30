@@ -3,6 +3,9 @@ import "./HomePageReviewCard.css";
 
 function HomePageReviewCard({blogInfo}) {
 
+    const coverImage = "https://ideal-java-engineer-01.s3.ap-south-1.amazonaws.com/";
+
+
     const routeToBlogPage = () => {
         window.location.href = `${process.env.PUBLIC_URL}/blog-post/${blogInfo.blogId}`;
     }
@@ -16,7 +19,7 @@ function HomePageReviewCard({blogInfo}) {
         <div className="homePage-review-outer-container-1">
             <div className="homePage-review-outer-container-2">
                 <div className="review-card-design"  onClick={routeToBlogPage}>
-                    <img className="image-deco" src={backgroundImage1} alt="no new decoration" />
+                    <img className="image-deco" src={coverImage + blogInfo.imageUrl} alt="no new decoration" />
                     <div className="review-descr-container">
                         <h3 className="review-desc-h3">{blogInfo.blogName}</h3>
                         <p className="desc-p-size">published on : {getPublishedDate(blogInfo.publishedAt)}</p>

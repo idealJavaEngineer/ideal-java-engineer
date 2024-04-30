@@ -3,6 +3,8 @@ import backgroundImage1 from '../../../static/images/backgroundImage1.jpg';
 
 function BlogCard({ blogInfo }) {
 
+    const coverImage = "https://ideal-java-engineer-01.s3.ap-south-1.amazonaws.com/";
+    
     const routeToBlogPage = () => {
         window.location.href = `${process.env.PUBLIC_URL}/blog-post/${blogInfo.blogId}`;
     }
@@ -12,6 +14,7 @@ function BlogCard({ blogInfo }) {
         return date.getDate() + "/" + date.toLocaleString('en', { month: 'long' }) + "/" + date.getFullYear();
     }
 
+
     return (
         <>
             {
@@ -19,7 +22,7 @@ function BlogCard({ blogInfo }) {
                     (
                         <div className="blog-container" onClick={routeToBlogPage}>
                             <div className="image-container">
-                                <img className="image-decoration" src={blogInfo.imageUrl} alt={blogInfo.blogName} />
+                                <img className="image-decoration" src={coverImage + blogInfo.imageUrl} alt={blogInfo.blogName} />
                             </div>
                             <div className="descr-container">
                                 <h3 className="desc-h3">{blogInfo.blogName}</h3>
