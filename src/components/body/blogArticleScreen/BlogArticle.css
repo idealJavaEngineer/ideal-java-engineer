@@ -225,6 +225,7 @@ font-family: "Dancing Script", cursive;
 .first-img-style {
   width: 100% !important;
   margin: 0% !important;
+  display: block;
   border-radius: 12px;
   filter: grayscale(0) !important;
   transition-duration: 0.5s;

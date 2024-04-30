@@ -7,6 +7,10 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
 import { likeBlogPostUtility, dislikeBlogPostUtility } from "../../../utilities/likeDislikeBlogPostUtility";
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
+import currImage from '../../../static/images/java-env-setup.png';
+
+
+
 
 const BlogArticle = () => {
     const { id } = useParams();
@@ -79,6 +83,7 @@ const BlogArticle = () => {
                     (<div className="screen-background">
                         <div className="blog-outer-container">
                             <div className="heading-container">
+                            
                                 <h1 className="h1-style">{blogData.blogName}</h1>
                                 <p className="p-style-1">published on : {getPublishedDate(blogData.publishedAt)}</p>
                                 {
